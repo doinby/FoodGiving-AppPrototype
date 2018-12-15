@@ -49,20 +49,53 @@ FAVICON
   </ul>
 
   <div class="container">
-    <!-- <h1></h1> -->
+    <h1>Food to Give</h1>
+    <img class="user-photo" src="images\agriculture-beans-corn-142520.jpg">
     <form class="three-col-grid" method="POST">
-      <h3 class="full-col">Please a photo or select one from library for the food Your
-      want to donate</h3>
-      <a href="giveFood-p3.html" class="postMoreFood-a" name="postMoreFood-a">Confirm Photo
-      <i class="fas fa-arrow-right"></i>
-      </a>
-    </form>
-  </div>
 
-  <footer>
-    <p class="credit">Food Giving 2018</p>
-  </footer>
 
-  <script src="js/scripts.js"></script>
+      <!-- <div class="text-input location">
+      <h3>Location</h3>
+      <span>
+      <input type="text" name="location" placeholder="Enter an address"/>
+      <i class="fas fa-map-marker-alt"></i>
+      Use my current location</span>
+    </div> -->
+
+    <div class="text-input">
+      <h3>Location</h3>
+      <input type="text" name="location" placeholder="Enter Zip Code"/>
+    </div>
+
+    <div class="text-input">
+      <h3>Pick Up Time</h3>
+      <span>
+        <input type="date" name="pick-up-date">
+        <span>At: </span>
+        <input style="width: 36px;" type="number" min="0" max="12" name="pick-up-time">
+        <select name="am-pm">
+          <option value="AM">AM</option>
+          <option value="PM">PM</option>
+        </select>
+      </span>
+    </div>
+    <div class="text-input note">
+      <h3>Note <span><i>(Optional)</i></span></h3>
+      <textarea type="text" name="note"
+      placeholder="Instruction for receiver"/></textarea>
+    </div>
+    <a href="giveFood-p5.html" class="submit-button" name="submit-button">
+      Post My Food
+      <i class="fas fa-check"></i>
+    </a>
+  </form>
+
+</div>
+
+<footer>
+  <p class="credit">Food Giving 2018</p>
+</footer>
+
+<script src="js/scripts.js"></script>
 </body>
 </html>

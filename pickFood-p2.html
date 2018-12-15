@@ -42,19 +42,21 @@ FAVICON
   </header>
 
   <ul class="breadcrumb">
-    <li><a href="giveFood-p2.html">Take Picture</a></li>
-    <li><a href="giveFood-p3.html">Food Logging 1</a></li>
-    <li><a href="giveFood-p4.html">Food Logging 2</a></li>
-    <li><a href="giveFood-p5.html">Confirmation</a></li>
+    <li><a href="pickFood-p2.html">Search Zipcode</a></li>
+    <li><a href="pickFood-p3.html">Sort Food Advertisements</a></li>
+    <li><a href="pickFood-p4.html">Confirmation</a></li>
   </ul>
 
   <div class="container">
-    <!-- <h1></h1> -->
+    <h1>Select One of the Pickup Point</h1>
     <form class="three-col-grid" method="POST">
-      <h3 class="full-col">Please a photo or select one from library for the food Your
-      want to donate</h3>
-      <a href="giveFood-p3.html" class="postMoreFood-a" name="postMoreFood-a">Confirm Photo
-      <i class="fas fa-arrow-right"></i>
+      <br>
+      <input type="text" name="location" placeholder="Enter Zip Code" style="width: 100%;"/>
+      <div class="map">
+
+      </div>
+      <a href="pickFood-p3.html" class="Search" name="Search">
+        Select This Food
       </a>
     </form>
   </div>

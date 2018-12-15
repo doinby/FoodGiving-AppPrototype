@@ -17,7 +17,7 @@ MOBILE META
 
 <!--
 JAVASCRIPT
--->
+<--></-->
 <script src="https://unpkg.com/vue"></script>
 <script src="node_modules/vue/vue.min.js"></script>
 
@@ -41,50 +41,68 @@ FAVICON
     <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
   </header>
 
+  <ul class="breadcrumb">
+    <li><a href="giveFood-p2.html">Take Picture</a></li>
+    <li><a href="giveFood-p3.html">Food Logging 1</a></li>
+    <li><a href="giveFood-p4.html">Food Logging 2</a></li>
+    <li><a href="giveFood-p5.html">Confirmation</a></li>
+  </ul>
+
   <div class="container">
     <h1>Food to Give</h1>
     <img class="user-photo" src="images\agriculture-beans-corn-142520.jpg">
     <form class="three-col-grid" method="POST">
-
-
-      <div class="text-input location">
-        <h3>Location</h3>
+      <div class="drop-down">
+        <h3>Food Type<span><i>(Please pick one)</i></span></h3>
+        <select name="food-types" class="field-select">
+          <option value="Grains">Grains</option>
+          <option value="Dairy Product">Dairy Product</option>
+          <option value="Meat">Meat</option>
+          <option value="Vegetable">Vegetable</option>
+          <option value="Fruit">Fruit</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="drop-down">
+        <h3>Food Quantity</h3>
         <span>
-          <input type="text" name="location" placeholder="Enter an address"/>
-          <!-- detect location click -->
-          <i class="fas fa-map-marker-alt"></i>
-          Use my current location</span>
-        </div>
+          <input type="number" name="food-quantity" min="1" placeholder="Qty"/>
+          <label>Unit:</label>
+          <select name="food-measurements" class="field-select">
+            <option value="item(s)">item(s)</option>
+            <option value="kg">kg</option>
+            <option value="pounds">pounds</option>
+            <option value="litres">litres</option>
+            <option value="millilitre">millilitre</option>
+            <option value="cup">cup</option>
+          </select>
+        </span>
+      </div>
+      <div class="text-input">
+        <h3>Expiration Date</h3>
+        <input type="date" name="expiration-date" placeholder="dd/mm/yy"/>
+      </div>
+      <div class="text-input description">
+        <h3>Description <span><i>(Optional)</i></span></h3>
+        <textarea type="text" name="description"
+        placeholder="Please provide details about the items"/></textarea>
+      </div>
+      <a class="add-button" name="add-button">
+        <i class="fas fa-plus-circle"></i>
+        Add Food Entry
+      </a>
+      <a href="giveFood-p4.html" class="submit-button" name="submit-button">
+        Enter Pick Up Detail
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </form>
 
-        <div class="text-input">
-          <h3>Pick Up Time</h3>
-          <span>
-            <input type="date" name="pick-up-date">
-            <span>At: </span>
-            <input style="width: 36px;" type="number" min="0" max="12" name="pick-up-time">
-            <select name="am-pm">
-              <option value="AM">AM</option>
-              <option value="PM">PM</option>
-            </select>
-          </span>
-        </div>
-        <div class="text-input note">
-          <h3>Note <span><i>(Optional)</i></span></h3>
-          <textarea type="text" name="note"
-          placeholder="Instruction for receiver"/></textarea>
-        </div>
-        <button href="giveFood-p3.html" class="submit-button" name="submit-button">
-          Post My Food
-          <i class="fas fa-check"></i>
-        </button>
-      </form>
+  </div>
 
-    </div>
+  <footer>
+    <p class="credit">Food Giving 2018</p>
+  </footer>
 
-    <footer>
-      <p class="credit">Food Giving 2018</p>
-    </footer>
-
-    <script src="js/scripts.js"></script>
-  </body>
-  </html>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
