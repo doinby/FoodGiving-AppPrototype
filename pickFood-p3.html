@@ -38,11 +38,13 @@ FAVICON
 
 <body>
   <header>
-    <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
+      <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    </a>
   </header>
 
   <ul class="breadcrumb">
-    <li><a href="pickFood-p2.html">Search Zipcode</a></li>
+    <li><a href="pickFood-p2.html">Available Pickup</a></li>
     <li><a href="pickFood-p3.html">Sort Food Advertisements</a></li>
     <li><a href="pickFood-p4.html">Confirmation</a></li>
   </ul>
@@ -50,44 +52,77 @@ FAVICON
   <div class="container">
     <h1>Food Details</h1>
     <form class="three-col-grid" method="POST">
-      <div class="text-input full-col">
-        <!-- <h3>Location</h3> -->
-        <br>
-        <input type="text" name="location" placeholder="Enter Zip Code" style="width: 100%;"/>
-      </div>
-      <div class="map">
+      <br>
+      <div class="map full-col">
 
       </div>
-      <div class="tab">
+      <div class="tab full-col">
         <input id="tab1" type="radio" name="tabs" checked>
         <label for="tab1">Details</label>
 
         <input id="tab2" type="radio" name="tabs">
-        <label for="tab2">Pickup Location</label>
+        <label for="tab2">Pickup Detail and Location</label>
 
         <input id="tab3" type="radio" name="tabs">
-        <label for="tab3">Review</label>
+        <label for="tab3">User Review</label>
 
         <section id="content1">
-          <p>
-            content1
-          </p>
+          <div class="content-box">
+            <h3>Food Name</h3>
+            <p>
+              Banana
+            </p>
+            <h3>Type</h3>
+            <p>
+              Vegetable
+            </p>
+            <h3>Food Quantity</h3>
+            <p>
+              500g
+            </p>
+            <h3>Expiry Date</h3>
+            <p>
+              18/12/2018
+            </p>
+            <h3>Description</h3>
+            <p>
+              They are fresh and ready for you to pick up!
+            </p>
+          </div>
         </section>
 
         <section id="content2">
-          <p>
-            content2
-          </p>
+          <div class="content-box">
+            <h3>Contact Name</h3>
+            <p>
+              William Mckee
+            </p>
+            <h3>Address </h3>
+            <p>
+              20 Foveaus St, Surry Hills, NSW 2010
+            </p>
+            <h3>Time Preference</h3>
+            <p>
+              Pick up by 20/12/2018
+              Afternoon at 3:00 PM
+            </p>
+            <h3>Additional Note</h3>
+            <p>
+              We have a small dog :)
+            </p>
+          </div>
         </section>
 
         <section id="content3">
-          <p>
-            content3
-          </p>
+          <div class="content-box">
+            <h3>[User's Name] <span class="star-rating">* * * * *</span>
+            </h3>
+          </div>
         </section>
       </div>
-      <a href="pickFood-p3.html" class="Search" name="Search">
-        Search
+      <a href="pickFood-p4.html" class="Search" name="Search">
+        Select This Food
+        <i class="fas fa-check"></i>
       </a>
     </form>
   </div>

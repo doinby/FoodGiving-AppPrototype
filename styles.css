@@ -24,13 +24,13 @@ time, mark, audio, video {
 }
 
 body * {
-  font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
 }
 
 h1 {
-  font-family: 'Rubik', sans-serif;
-  font-size: 36px;
+	font-family: 'Rubik', sans-serif;
+	font-size: 36px;
 	font-weight: 700;
 }
 
@@ -38,7 +38,8 @@ h2 {
 	font-size: 28px;
 }
 
-h3 {
+h3,
+.tab label {
 	font-size: 18px;
 	padding: 10px 0;
 }
@@ -59,13 +60,13 @@ body {
 
 header,
 footer, {
-  display: flex;
+	display: flex;
 	flex-wrap: wrap;
 }
 
 header {
 	padding: 0 2em;
-  background-color: rgb(58, 207, 115);
+	background-color: rgb(58, 207, 115);
 }
 
 footer {
@@ -74,25 +75,46 @@ footer {
 	position: sticky;
 	text-align: right;
 	color: rgb(255, 255, 255);
-  background-color: rgb(42, 44, 51);
+	background-color: rgb(42, 44, 51);
 }
 
 section {
-  display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #abc;
-}
-
-input {
-	padding: 4px;
 	display: none;
-
+	padding: 20px 0 0;
 }
 
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3 	{
-  display: block;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+input {
+	padding: 4px;
+}
+
+.tab input {
+	display: none;
+}
+
+.tab label {
+	padding: 24px;
+}
+
+.content-box {
+	width: 500px;
+	min-height: 400px;
+	padding: 2em;
+	text-align: left;
+}
+
+.content-box h3 {
+	margin: 1 2em;
 }
 
 .logo {
@@ -113,12 +135,12 @@ input {
 	padding: 0.5em;
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
-  font-size: 10px;
+	font-size: 10px;
 	font-weigth: 500;
-	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0);
 	border: 0 solid transparent;
 	color: LightGray;
-	opacity: 0.5;
+	opacity: 0.8;
 }
 
 .breadcrumb a::after {
@@ -127,7 +149,7 @@ input {
 
 .container {
 	min-height: 100%;
-  padding: 2em 4em;
+	padding: 2em 4em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -136,13 +158,13 @@ input {
 
 .three-col-grid {
 	display: grid;
-  grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
 	padding: 0 20px;
-  /* grid-auto-rows: minmax(100px, auto); */
+	/* grid-auto-rows: minmax(100px, auto); */
 	/* align-items: center;
-  align-content: center;
-  justify-items: center; */
+	align-content: center;
+	justify-items: center; */
 }
 
 .user-photo {
@@ -178,16 +200,16 @@ textarea {
 }
 
 textarea::-webkit-input-placeholder { /* WebKit browsers */
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
-  line-height: 1.5em;
+	line-height: 1.5em;
 }
 
 .location {
@@ -210,7 +232,7 @@ textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
 	padding: 4px;
 	grid-column: 1 / 4;
 	font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+	font-size: 14px;
 	font-weight: 500;
 }
 
@@ -238,7 +260,6 @@ a:active {
 	align-items: center;
 	justify-content: center;
 	grid-column: 2 / 3;
-	/* grid-row: 5; */
 	font-family: 'Rubik', sans-serif;
 	font-size: 16px;
 	font-weight: 700;
@@ -272,16 +293,32 @@ RESPONSIVE DESIGN
 @media screen and (max-width: 768px) {
 	.container {
 		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.three-col-grid {
 		display: grid;
-	  grid-template-columns: 1fr;
+		grid-template-columns: 1fr;
 		gap: 12px;
 		padding: 0 20px;
 	}
 
 	.three-col-grid * {
 		grid-column: 1 / 1;
+		align-items: center;
+		justify-content: center;
+	}
+
+	a,
+	a:hover,
+	a:active,
+	.add-button,
+	.add-button:hover {
+		max-width: 100%;
+		padding: 0.5em;
 	}
 }
