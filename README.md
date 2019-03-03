@@ -10,6 +10,7 @@ List of features:
 - Sticky footer
 - Animated button
 - Responsive design for mobile use
+- Using BEM methology for structuring CSS code
 
 Implementation was made based on wireframe designed by Minjie Shi:
 - https://drive.google.com/file/d/1eXX0aqPC9lbVsQ-ldBkJj5gkEPQSBFyB/view?usp=sharing
