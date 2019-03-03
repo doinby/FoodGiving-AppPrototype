@@ -1,5 +1,5 @@
 # FoodGiving-AppPrototype
-This is a prototype built during an 48-hours hackathon using HTML and CSS
+This is a prototype built during an 48-hours hackathon using HTML and CSS. Visit live version at https://chinhdo.co/FoodGiving-AppPrototype/
 
 See how it works:
 - https://youtu.be/oPSsAbVjFC0?t=144
