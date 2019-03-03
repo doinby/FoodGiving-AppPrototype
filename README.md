@@ -13,3 +13,5 @@ List of features:
 
 Implementation was made based on wireframe designed by Minjie Shi:
 - https://drive.google.com/file/d/1eXX0aqPC9lbVsQ-ldBkJj5gkEPQSBFyB/view?usp=sharing
+
+Access Lading Page: https://chinhdo.co/foodgiving/
