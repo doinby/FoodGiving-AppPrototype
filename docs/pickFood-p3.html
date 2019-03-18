@@ -1,69 +1,65 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <!--
-  BASIC SETUP
--->
-<meta charset="utf-8">
-<title>Food Giving: Give. Receive. Enjoy.</title>
-<meta name="description" content="">
-<meta name="author" content="No Moss Maker - Food Giving">
-
-<!--
-MOBILE META
--->
-<meta name="viewport" content="width=device-width">
-
-<!--
-JAVASCRIPT
--->
-<script src="https://unpkg.com/vue"></script>
-<script src="node_modules/vue/vue.min.js"></script>
-
-<!--
-CSS
--->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-<!--
-FAVICON
--->
-<link rel="icon" type="image/png" href="images/favicon.png">
-
+    BASIC SETUP
+  -->
+  <meta charset="utf-8">
+  <title>Food Giving: Give. Receive. Enjoy.</title>
+  <meta name="description" content="">
+  <meta name="author" content="Food Giving">
+  
+  <!--
+    MOBILE META
+  -->
+  <meta name="viewport" content="width=device-width">
+  
+  <!--
+    JAVASCRIPT
+  -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="node_modules/vue/vue.min.js"></script>
+  
+  <!--
+    CSS
+  -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!--
+    FAVICON
+  -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
 </head>
 
 <body>
   <header>
-    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
-      <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    <a class="__logo" href="index.html">
+      <img src="images/foodGiving-NoShadow.svg" alt="FG Logo">
     </a>
   </header>
-
-  <ul class="breadcrumb">
-    <li><a href="pickFood-p2.html">Available Pickup</a></li>
-    <li><a href="pickFood-p3.html">Sort Food Advertisements</a></li>
-    <li><a href="pickFood-p4.html">Confirmation</a></li>
+  
+  <ul class="breadcrumb --flex-horizontal">
+    <li><a href="pickFood-p2.html">Take Picture</a></li>
+    <li><a href="pickFood-p3.html">Food Logging 1</a></li>
+    <li><a href="pickFood-p4.html">Food Logging 2</a></li>
   </ul>
-
-  <div class="container">
-    <h1>Food Details</h1>
-    <form class="three-col-grid" method="POST">
-      <br>
-      <div class="map full-col">
-
-      </div>
-      <div class="tab full-col">
+  
+  <main>
+    <div class="__content --flex-vertical">
+      <h1>Food Details</h1>
+      <div class="tab">
         <input id="tab1" type="radio" name="tabs" checked>
         <label for="tab1">Details</label>
-
+        
         <input id="tab2" type="radio" name="tabs">
-        <label for="tab2">Pickup Detail and Location</label>
-
+        <label for="tab2">Contact & Location</label>
+        
         <input id="tab3" type="radio" name="tabs">
         <label for="tab3">User Review</label>
-
+        
         <section id="content1">
           <div class="content-box">
             <h3>Food Name</h3>
@@ -88,7 +84,7 @@ FAVICON
             </p>
           </div>
         </section>
-
+        
         <section id="content2">
           <div class="content-box">
             <h3>Contact Name</h3>
@@ -110,7 +106,7 @@ FAVICON
             </p>
           </div>
         </section>
-
+        
         <section id="content3">
           <div class="content-box">
             <h3>[User's Name] <span class="star-rating">* * * * *</span>
@@ -118,17 +114,20 @@ FAVICON
           </div>
         </section>
       </div>
-      <a href="pickFood-p4.html" class="Search" name="Search">
+      <a href="pickFood-p4.html" class="--flex-horizontal" id="button">
         Select This Food
-        <i class="fas fa-check"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+          d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+        </svg>
       </a>
-    </form>
-  </div>
-
+    </div>
+  </main>
+  
   <footer>
-    <p class="credit">Food Giving 2018</p>
+    <p class="__copyright">Food Giving 2018</p>
   </footer>
-
+  
   <script src="js/scripts.js"></script>
 </body>
 </html>

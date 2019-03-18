@@ -1,70 +1,66 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <!--
-  BASIC SETUP
--->
-<meta charset="utf-8">
-<title>Food Giving: Give. Receive. Enjoy.</title>
-<meta name="description" content="">
-<meta name="author" content="No Moss Maker - Food Giving">
-
-<!--
-MOBILE META
--->
-<meta name="viewport" content="width=device-width">
-
-<!--
-JAVASCRIPT
--->
-<script src="https://unpkg.com/vue"></script>
-<script src="node_modules/vue/vue.min.js"></script>
-
-<!--
-CSS
--->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-<!--
-FAVICON
--->
-<link rel="icon" type="image/png" href="images/favicon.png">
-
+    BASIC SETUP
+  -->
+  <meta charset="utf-8">
+  <title>Food Giving: Give. Receive. Enjoy.</title>
+  <meta name="description" content="">
+  <meta name="author" content="Food Giving">
+  
+  <!--
+    MOBILE META
+  -->
+  <meta name="viewport" content="width=device-width">
+  
+  <!--
+    JAVASCRIPT
+  -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="node_modules/vue/vue.min.js"></script>
+  
+  <!--
+    CSS
+  -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!--
+    FAVICON
+  -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
 </head>
 
 <body>
   <header>
-    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
-      <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    <a class="__logo" href="index.html">
+      <img src="images/foodGiving-NoShadow.svg" alt="FG Logo">
     </a>
   </header>
-
-  <ul class="breadcrumb">
-    <li><a href="pickFood-p2.html">Available Pickup</a></li>
-    <li><a href="pickFood-p3.html">Sort Food Advertisements</a></li>
-    <li><a href="pickFood-p4.html">Confirmation</a></li>
+  
+  <ul class="breadcrumb --flex-horizontal">
+    <li><a href="pickFood-p2.html">Take Picture</a></li>
+    <li><a href="pickFood-p3.html">Food Logging 1</a></li>
+    <li><a href="pickFood-p4.html">Food Logging 2</a></li>
   </ul>
-
-  <div class="container">
-    <h1>Request Sent.</h1>
-    <form class="three-col-grid" method="POST">
-      <h3 class="full-col">Your request to pick up food is sent. Please wait for
-      the other user's to confirm</h3>
-      <!-- <a href="" class="checkMyFood" name="checkMyFood">
-        Check My Food
-      </a>
-      <a href="giveFood-p2.html" class="postMoreFood" name="postMoreFood">
-        Submit More Food
-      </a> -->
-    </form>
-  </div>
-
+  
+  <main>
+    <div class="__content --flex-vertical">
+      <h1>Request Sent!</h1>
+      <h3>Your request to pick up food is sent. Please wait for
+        the other user's to confirm
+      </h3>
+      <a class="--flex-vertical" id="button" href="index.html">Return Home</a>
+    </div>
+  </main>
+  
   <footer>
-    <p class="credit">Food Giving 2018</p>
+    <p class="__copyright">Food Giving 2018</p>
   </footer>
-
+  
   <script src="js/scripts.js"></script>
 </body>
 </html>

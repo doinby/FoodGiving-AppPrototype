@@ -1,108 +1,108 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <!--
-  BASIC SETUP
--->
-<meta charset="utf-8">
-<title>Food Giving: Give. Receive. Enjoy.</title>
-<meta name="description" content="">
-<meta name="author" content="No Moss Maker - Food Giving">
-
-<!--
-MOBILE META
--->
-<meta name="viewport" content="width=device-width">
-
-<!--
-JAVASCRIPT
-<--></-->
-<script src="https://unpkg.com/vue"></script>
-<script src="node_modules/vue/vue.min.js"></script>
-
-<!--
-CSS
--->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-<!--
-FAVICON
--->
-<link rel="icon" type="image/png" href="images/favicon.png">
-
+    BASIC SETUP
+  -->
+  <meta charset="utf-8">
+  <title>Food Giving: Give. Receive. Enjoy.</title>
+  <meta name="description" content="">
+  <meta name="author" content="Food Giving">
+  
+  <!--
+    MOBILE META
+  -->
+  <meta name="viewport" content="width=device-width">
+  
+  <!--
+    JAVASCRIPT
+  -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="node_modules/vue/vue.min.js"></script>
+  
+  <!--
+    CSS
+  -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!--
+    FAVICON
+  -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
 </head>
 
 <body>
   <header>
-    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
-      <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    <a class="__logo" href="index.html">
+      <img src="images/foodGiving-NoShadow.svg" alt="FG Logo">
     </a>
   </header>
-
-  <ul class="breadcrumb">
+  
+  <ul class="breadcrumb --flex-horizontal">
     <li><a href="giveFood-p2.html">Take Picture</a></li>
     <li><a href="giveFood-p3.html">Food Logging 1</a></li>
     <li><a href="giveFood-p4.html">Food Logging 2</a></li>
     <li><a href="giveFood-p5.html">Confirmation</a></li>
   </ul>
-
-  <div class="container">
-    <h1>Food to Give</h1>
-    <img class="user-photo" src="images\agriculture-beans-corn-142520.jpg">
-    <form class="three-col-grid" method="POST">
-      <div class="drop-down">
-        <h3>Food Type<span><i>(Please pick one)</i></span></h3>
-        <select name="food-types" class="field-select">
-          <option value="Grains">Grains</option>
-          <option value="Dairy Product">Dairy Product</option>
-          <option value="Meat">Meat</option>
-          <option value="Vegetable">Vegetable</option>
-          <option value="Fruit">Fruit</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-      <div class="drop-down">
-        <h3>Food Quantity</h3>
-        <span>
-          <input type="number" name="food-quantity" min="1" placeholder="Qty"/>
-          <!-- <label>Unit:</label>
-          <select name="food-measurements" class="field-select">
-            <option value="item(s)">item(s)</option>
-            <option value="kg">kg</option>
-            <option value="pounds">pounds</option>
-            <option value="litres">litres</option>
-            <option value="millilitre">millilitre</option>
-            <option value="cup">cup</option>
-          </select> -->
-        </span>
-      </div>
-      <div class="text-input">
-        <h3>Expiration Date</h3>
-        <input type="date" name="expiration-date" placeholder="dd/mm/yy"/>
-      </div>
-      <div class="text-input description">
-        <h3>Description <span><i>(Optional)</i></span></h3>
-        <textarea type="text" name="description"
-        placeholder="Please provide details about the items"/></textarea>
-      </div>
-      <a class="add-button" name="add-button">
-        <i class="fas fa-plus-circle"></i>
-        Add Food Entry
+  
+  <main>
+    <div class="__content --flex-vertical">
+      <h1>Food to Give</h1>
+      <img class="user-photo" src="images\agriculture-beans-corn-142520.jpg">
+      <form class="three-col-grid" method="POST">
+        <div class="drop-down --flex-vertical">
+          <h3>Food Type</h3>
+          <select name="food-types" class="field-select">
+            <option value="Grains">Grains</option>
+            <option value="Dairy Product">Dairy Product</option>
+            <option value="Meat">Meat</option>
+            <option value="Vegetable">Vegetable</option>
+            <option value="Fruit">Fruit</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="drop-down --flex-vertical">
+          <h3>Food Quantity</h3>
+          <span>
+            <input type="number" name="food-quantity" min="1" placeholder="Qty"/>
+          </span>
+        </div>
+        <div class="text-input --flex-vertical">
+          <h3>Expiration Date</h3>
+          <input type="date" name="expiration-date" placeholder="dd/mm/yy"/>
+        </div>
+        <div class="text-input description">
+          <h3>Description (Optional)</h3>
+          <textarea type="text" name="description"
+          placeholder="Please provide details about the items"/></textarea>
+        </div>
+      </form>
+      <a href="#" id="button-gray" class="--flex-horizontal">
+        Add More Entry
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-5v5h-2v-5h-5v-2h5v-5h2v5h5v2z" />
+          </svg>
       </a>
-      <a href="giveFood-p4.html" class="submit-button" name="submit-button">
+      <a href="giveFood-p4.html" id="button" class="--flex-horizontal">
         Enter Pick Up Detail
-        <i class="fas fa-arrow-right"></i>
-      </a>
-    </form>
-
-  </div>
-
-  <footer>
-    <p class="credit">Food Giving 2018</p>
-  </footer>
-
-  <script src="js/scripts.js"></script>
-</body>
-</html>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" />
+          </svg>
+        </a>
+        
+      </div>
+    </main>
+    
+    <footer>
+      <p class="credit">Food Giving 2018</p>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+  </body>
+  </html>
+  

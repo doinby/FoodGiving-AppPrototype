@@ -1,102 +1,104 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <!--
-  BASIC SETUP
--->
-<meta charset="utf-8">
-<title>Food Giving: Give. Receive. Enjoy.</title>
-<meta name="description" content="">
-<meta name="author" content="No Moss Maker - Food Giving">
-
-<!--
-MOBILE META
--->
-<meta name="viewport" content="width=device-width">
-
-<!--
-JAVASCRIPT
--->
-<script src="https://unpkg.com/vue"></script>
-<script src="node_modules/vue/vue.min.js"></script>
-
-<!--
-CSS
--->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-<!--
-FAVICON
--->
-<link rel="icon" type="image/png" href="images/favicon.png">
-
+    BASIC SETUP
+  -->
+  <meta charset="utf-8">
+  <title>Food Giving: Give. Receive. Enjoy.</title>
+  <meta name="description" content="">
+  <meta name="author" content="Food Giving">
+  
+  <!--
+    MOBILE META
+  -->
+  <meta name="viewport" content="width=device-width">
+  
+  <!--
+    JAVASCRIPT
+  -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="node_modules/vue/vue.min.js"></script>
+  
+  <!--
+    CSS
+  -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!--
+    FAVICON
+  -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
 </head>
 
 <body>
   <header>
-    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
-      <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    <a class="__logo" href="index.html">
+      <img src="images/foodGiving-NoShadow.svg" alt="FG Logo">
     </a>
   </header>
-
-  <ul class="breadcrumb">
+  
+  <ul class="breadcrumb --flex-horizontal">
     <li><a href="giveFood-p2.html">Take Picture</a></li>
     <li><a href="giveFood-p3.html">Food Logging 1</a></li>
     <li><a href="giveFood-p4.html">Food Logging 2</a></li>
     <li><a href="giveFood-p5.html">Confirmation</a></li>
   </ul>
-
-  <div class="container">
-    <h1>Food to Give</h1>
-    <img class="user-photo" src="images\agriculture-beans-corn-142520.jpg">
-    <form class="three-col-grid" method="POST">
-
-
-      <div class="text-input location">
-      <h3>Location</h3>
-      <span>
-      <input type="text" name="location" placeholder="Enter an address"/>
-      <i class="fas fa-map-marker-alt"></i>
-      Use my current location</span>
-    </div>
-
-    <!-- <div class="text-input">
-      <h3>Location</h3>
-      <input type="text" name="location" placeholder="Enter Zip Code"/>
-    </div> -->
-
-    <div class="text-input">
-      <h3>Pick Up Time</h3>
-      <span>
-        <input type="date" name="pick-up-date">
-        <!-- <span>At: </span>
-        <input style="width: 36px;" type="number" min="0" max="12" name="pick-up-time"> -->
-        <select name="am-pm">
-          <option value="morning">Morning</option>
-          <option value="afternoon">Afternoon</option>
-          <option value="evening">Evening</option>
-        </select>
-      </span>
-    </div>
-    <div class="text-input note">
-      <h3>Note <span><i>(Optional)</i></span></h3>
-      <textarea type="text" name="note"
-      placeholder="Instruction for receiver"/></textarea>
-    </div>
-    <a href="giveFood-p5.html" class="submit-button" name="submit-button">
-      Post My Food
-      <i class="fas fa-check"></i>
-    </a>
-  </form>
-
-</div>
-
-<footer>
-  <p class="credit">Food Giving 2018</p>
-</footer>
-
-<script src="js/scripts.js"></script>
-</body>
-</html>
+  
+  <main>
+    <div class="__content --flex-vertical">
+      <h1>Food to Give</h1>
+      <img class="user-photo" src="images\agriculture-beans-corn-142520.jpg">
+      <form class="three-col-grid" method="POST">
+        <div class="text-input location --flex-vertical">
+          <h3>Location</h3>
+          <div class="__sub-content --flex-horizontal">
+            <input type="text" name="location" placeholder="Enter an address"/>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 14c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6z" />
+            </svg>
+            Use my current location
+            </p>
+          </div>
+        </div>          
+        <div class="text-input">
+          <h3>Pick Up Time</h3>
+          <div class="__sub-content --flex-horizontal">
+            <input type="date" name="pick-up-date">
+            <select name="am-pm">
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+            </select>
+          </div>
+        </div>
+        <div class="text-input note">
+          <h3>Note (Optional)</h3>
+          <textarea type="text" name="note"
+          placeholder="Instruction for receiver"/></textarea>
+        </div>
+      </form>
+      <a href="giveFood-p5.html" id="button" class="--flex-horizontal">
+        Post My Food
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path
+            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z" />
+          </svg>
+        </a>
+        
+      </div>
+    </main>
+    
+    <footer>
+      <p class="__copyright">Food Giving 2018</p>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+  </body>
+  </html>
+  

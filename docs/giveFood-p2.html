@@ -1,70 +1,73 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <!--
-  BASIC SETUP
--->
-<meta charset="utf-8">
-<title>Food Giving: Give. Receive. Enjoy.</title>
-<meta name="description" content="">
-<meta name="author" content="No Moss Maker - Food Giving">
-
-<!--
-MOBILE META
--->
-<meta name="viewport" content="width=device-width">
-
-<!--
-JAVASCRIPT
--->
-<script src="https://unpkg.com/vue"></script>
-<script src="node_modules/vue/vue.min.js"></script>
-
-<!--
-CSS
--->
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-<!--
-FAVICON
--->
-<link rel="icon" type="image/png" href="images/favicon.png">
-
+    BASIC SETUP
+  -->
+  <meta charset="utf-8">
+  <title>Food Giving: Give. Receive. Enjoy.</title>
+  <meta name="description" content="">
+  <meta name="author" content="Food Giving">
+  
+  <!--
+    MOBILE META
+  -->
+  <meta name="viewport" content="width=device-width">
+  
+  <!--
+    JAVASCRIPT
+  -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="node_modules/vue/vue.min.js"></script>
+  
+  <!--
+    CSS
+  -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!--
+    FAVICON
+  -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
 </head>
 
 <body>
   <header>
-    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
-      <img class= "logo" src="images\foodGiving-NoShadow.svg" alt="FG Logo">
+    <a class="__logo" href="index.html">
+      <img src="images/foodGiving-NoShadow.svg" alt="FG Logo">
     </a>
   </header>
-
-  <ul class="breadcrumb">
+  
+  <ul class="breadcrumb --flex-horizontal">
     <li><a href="giveFood-p2.html">Take Picture</a></li>
     <li><a href="giveFood-p3.html">Food Logging 1</a></li>
     <li><a href="giveFood-p4.html">Food Logging 2</a></li>
     <li><a href="giveFood-p5.html">Confirmation</a></li>
   </ul>
-
-  <div class="container">
-    <!-- <h1></h1> -->
-    <form class="three-col-grid" method="POST">
-      <a href="" class="selectPhoto-a" name="selectPhoto-a" style="background-color: LightGray; Border: 0px solid LightGray;">Select a photo from library...
-      </a>
-      <h3 class="full-col">Please a photo or select one from library for the food Your
-      want to donate</h3>
-      <a href="giveFood-p3.html" class="postMoreFood-a" name="postMoreFood-a">Confirm Photo
-      <i class="fas fa-arrow-right"></i>
-      </a>
-    </form>
-  </div>
-
-  <footer>
-    <p class="credit">Food Giving 2018</p>
-  </footer>
-
-  <script src="js/scripts.js"></script>
-</body>
-</html>
+  
+  <main>
+    <div class="__content --flex-vertical">      
+      <a href="#" class="--flex-horizontal" id="button-gray">Select a photo from library...</a>
+      <h3>Pick a photo or select one from library for the food Your
+        want to donate</h3>
+        <a class="--flex-horizontal" id="button" href="giveFood-p3.html">
+          Confirm photo
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.218 19l-1.782-1.75 5.25-5.25-5.25-5.25 1.782-1.75 6.968 7-6.968 7z" />
+            </svg>
+        </a>        
+      </div>
+    </main>
+    
+    <footer>
+      <p class="__copyright">Food Giving 2018</p>
+    </footer>
+    
+    <script src="js/scripts.js"></script>
+  </body>
+  </html>
+  

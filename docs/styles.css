@@ -1,8 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway|Rubik:700');
+/*
 
+This stylesheet is written in BEM
+
+Block = .block
+Element = .block__element
+Modifier = .block__element--modifier OR .block--modifier
+
+For more information: http://getbem.com/introduction/
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway|Rubik');
+
+/* Basic Theme ********************************************/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, a:active, a:hover, a:visited abbr, acronym, address, big, cite, code,
+abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -12,79 +25,242 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, form * {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
-	text-decoration: none;
 	list-style: none;
+	font-family: 'Raleway', sans-serif;
+	color: rgb(33, 33, 33);
 }
 
-body * {
-	font-family: 'Raleway', sans-serif;
-	font-size: 14px;
+a, a:link, a:active, a:hover, a:visited {
+	margin: 0;
+	text-decoration: none;
+	/* font-weight: 400; */
+	color: rgb(33, 33, 33); 
+}
+
+a:hover,
+a:active {
+	fill: #e60073;
+	color: #e60073;
+}
+
+/* Block ************************************************/
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: Snow;
+}
+
+footer {
+	position: relative;
+	flex-shrink: 0;
+	justify-content: space-evenly;
+	background-color: #37474F;
+}
+
+footer,
+header {
+	padding: 2em;
+}
+
+header {
+	align-items: center;
+	justify-content: space-around;
+}
+
+html {
+	height: 100%;
+}
+
+main {
+	display: flex;
+	flex: 1 0 auto;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Element **********************************************/
+
+a:hover,
+a:active {
+	fill: rgb(230, 0, 115);
+	color: rgb(230, 0, 115);
+}
+
+footer div,
+footer h3,
+footer p,
+footer a:link {
+	font-weight: 600;
+	color: Snow;
+	fill: Snow;
+}
+
+footer a:hover,
+footer a:active {
+	fill: rgb(230, 0, 115);
+	color: rgb(230, 0, 115);
+}
+
+footer li {
+	padding: 8px 0;
+}
+
+footer svg {
+	width: 32px;
+	height: auto;
+}
+
+h1, h2 {
+	text-align: center;
 }
 
 h1 {
+	padding: 1em;
 	font-family: 'Rubik', sans-serif;
 	font-size: 36px;
 	font-weight: 700;
 }
 
 h2 {
+	padding: 1em;
 	font-size: 28px;
 }
 
-h3,
-.tab label {
+h3 {
+	padding: 1em 0;
 	font-size: 18px;
-	padding: 10px 0;
-}
-
-i {
-	padding: 0 4px;
 }
 
 p {
-	padding: 4px 0;
+	text-indent: 14px;
+	line-height: 1.6;
 }
 
-html,
-body {
-	width: 100%;
-	height: 100%;
+.__banner-text * {
+	color: white;
 }
 
-body {
-	display: flex;
-	flex-direction: column;
+.__contact p {
+	text-indent: 0;
 }
 
-header,
-footer, {
-	display: flex;
-	flex-wrap: wrap;
+.__contact,
+.__quick-links,
+.__social-media {
+	margin-left: 2em;
 }
 
-header {
-	padding: 0 1em;
+.__content {
+	padding: 1em 2em;
+	align-items: center;
+	justify-content: center;
+}
+
+.__copyright {	
+	/* position: absolute;
+	bottom: 12px;
+	right: 12px; */
+	text-align: right;
+}
+
+.__copyright::before {
+	content:"\00a9" "\00a0";
+}
+
+.__content > div {
+	padding-bottom: 2em;
+}
+
+.__content > div:last-child {
+	padding-bottom: 0;
+}
+
+.__content:nth-child(even) {
 	background-color: rgb(58, 207, 115);
 }
 
-footer {
-	flex-shrink: 0;
-	padding: 1em;
-	text-align: right;
-	color: rgb(255, 255, 255);
-	background-color: rgb(42, 44, 51);
+.__logo img {
+	width: auto;
+	height: 40px;
+}
+
+.__navigation-bar li {
+	padding: 0 16px;
+}
+
+.__navigation-bar li:last-child {
+	padding-right: 0;
+}
+
+.__social-media-links a:nth-child(even) {
+	padding: 0 1em;
+}
+
+/* Modifier *********************************************/
+
+#button, #button-gray {
+	width: 16em;
+	height: 3em;
+	margin: 1em 0;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(58, 207, 115);
+	color: Snow;
+	fill: snow;
+	font-weight: 800;
+}
+
+#button-gray {
+	height: 2em;
+	background-color: lightgray;	
+}
+
+#button:hover,
+#button:active,
+#button-gray:hover,
+#button-gray:active {
+	background-color: rgb(230, 0, 115);
+}
+
+header #button {
+	text-transform: uppercase;
+}
+
+#button svg, #button-gray svg {
+	height: 16px;
+	margin-left: 0.5em;
+}
+
+.--flex-horizontal {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.--flex-vertical {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 }
 
 section {
 	display: none;
 	padding: 20px 0 0;
+}
+
+input:checked + label {	
+	color: #e60073;
+	border-bottom: 1px solid rgb(58, 207, 115);
 }
 
 #tab1:checked ~ #content1,
@@ -100,6 +276,13 @@ section {
 
 input {
 	padding: 4px;
+	/* width: 200px; */
+}
+
+.tab {
+	height: 30em;
+	align-items: center
+	justify-content: center;
 }
 
 .tab input {
@@ -107,69 +290,34 @@ input {
 }
 
 .tab label {
-	padding: 24px;
-}
-
-.content-box {
-	width: 500px;
-	min-height: 400px;
-	padding: 2em;
-	text-align: left;
-}
-
-.content-box h3 {
-	margin: 1 2em;
-}
-
-.logo {
-	width: 120px;
-	/* padding: 12px; */
+	padding-bottom: 1em;
+	margin: 0 1em 0 1em;
+	color: lightgray;
 }
 
 .breadcrumb {
-	margin: 1em;
-	display: flex;
-	flex-direction: row;
-}
-
-.breadcrumb a,
-.breadcrumb a:hover,
-.breadcrumb a:active {
-	width: auto;
-	padding: 0.5em;
-	margin: 0;
+	margin: 1em;	
 	font-family: 'Raleway', sans-serif;
 	font-size: 10px;
-	font-weigth: 500;
-	background-color: rgba(255, 255, 255, 0);
-	border: 0 solid transparent;
+}
+
+.breadcrumb a {
 	color: LightGray;
-	opacity: 0.8;
+}
+
+.breadcrumb a:hover,
+.breadcrumb a:active {
+	color: rgb(33, 33, 33);
 }
 
 .breadcrumb a::after {
 	content: "\00a0" "\203A" "\00a0";
 }
 
-.container {
-	padding: 2em 4em;
-	display: flex;
-	flex: 1 0 auto;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
 .three-col-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 24px;
-	padding: 0 20px;
-}
-
-.user-photo {
-	width: 80%;
-	padding: 1em;
 }
 
 form input,
@@ -184,12 +332,6 @@ form textarea {
 	-moz-box-sizing: border-box;
 	background: rgb(255, 255, 255);
 	border: 1px solid #ccc;
-}
-
-.description,
-.note {
-	width: 100%;
-	grid-column: 1 / 4;
 }
 
 textarea {
@@ -212,114 +354,54 @@ textarea:-ms-input-placeholder { /* Internet Explorer 10+ */
 	line-height: 1.5em;
 }
 
+.description {
+	grid-column: 1 / 4;
+}
+
 .location {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
 	grid-column: 1 / 3;
 }
 
-.location input {
-	width: 320px;
-}
-
-.add-button,
-.add-button:hover,
-.add-button:active {
-	width: 100%;
-	padding: 4px;
+.note {
 	grid-column: 1 / 4;
-	font-family: 'Raleway', sans-serif;
-	font-size: 14px;
-	font-weight: 500;
 }
 
-.add-button {
-	background-color: LightGray;
-	border: 1px solid LightGray;
-	opacity: 0.8;
+.user-photo, .map-photo {
+	width: 80%;
+	height: auto;
+	padding: 1em;
 }
 
-.add-button:hover {
-	color: black;
-	background-color: LightGray;
-	border: 1px solid LightGray;
-	opacity: 1;
-}
-
-a,
-a:hover,
-a:active {
-	width: 240px;
-	padding: 12px;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+.__sub-content {
 	align-items: center;
-	justify-content: center;
-	grid-column: 2 / 3;
-	font-family: 'Rubik', sans-serif;
-	font-size: 16px;
-	font-weight: 700;
+	justify-content: space-evenly;
 }
 
-a {
-	color: rgb(255, 255, 255);
-	background-color: rgba(230, 0, 115);
-	border: 1px solid rgba(230, 0, 115);
+section {
+	display: none;
+	padding: 20px 0 0;
 }
 
-a:hover,
-a:active {
-	color: rgb(0, 0, 0);
-	background-color: rgb(58, 207, 115);
-	border: 1px solid rgb(58, 207, 115);
-}
+/* Responsive Layout*************************************/
 
-.credit::before {
-	content:"\00a9" "\00a0";
-}
-
-.full-col {
-	grid-column: 1 / 4;
-	text-align: center;
-}
-
-/*
-RESPONSIVE DESIGN
-*/
-
-@media screen and (max-width: 768px) {
-	.container {
+@media (max-width: 800px) {
+	.__content {
 		padding: 1em;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.three-col-grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 12px;
-		padding: 0 20px;
+		display: flex;
+		flex-directioN: column;
+		flex-wrap: wrap;
 	}
 
-	.three-col-grid * {
-		grid-column: 1 / 1;
-		align-items: center;
-		justify-content: center;
+	.tab label {
+		margin: 0 0.5em;
 	}
 
-	a,
-	a:hover,
-	a:active,
-	.add-button,
-	.add-button:hover {
-		max-width: 100%;
-		padding: 0.5em;
+	#button, #button-gray {
+	width: 16em;
+	height: 3em;
+	margin: 1em 0;
 	}
 }

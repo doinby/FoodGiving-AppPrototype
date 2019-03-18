@@ -25,7 +25,6 @@
     CSS
   -->
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   
   <!--
     FAVICON
@@ -36,8 +35,8 @@
 
 <body>
   <header>
-    <a href="index.html" style="background-color: transparent; border: 0px solid transparent;">
-      <img class= "logo" src="images/foodGiving-NoShadow.svg" alt="FG Logo">
+    <a class= "__logo" href="index.html">
+      <img src="images/foodGiving-NoShadow.svg" alt="FG Logo">
     </a>
   </header>
   
@@ -56,16 +55,16 @@
     <li><a href="giveFood-p5.html">Confirmation</a></li>
   </ul> -->
   
-  <div class="container">
-    <h1>I am...</h1>
-    <div><br><br></div>
-    <a href="giveFood-p2.html">Giving Food</a>
-    <div><br><br></div>
-    <a href="pickFood-p2.html">Picking up Food</a>
-  </div>
+  <main>
+    <div class="__content --flex-vertical">
+      <h1>I am...</h1>
+      <a class="--flex-vertical" id="button" href="giveFood-p2.html">Giving Food</a>
+      <a class="--flex-vertical" id="button" href="pickFood-p2.html">Picking up Food</a>
+    </div>
+  </main>
   
   <footer>
-    <p class="credit">Food Giving 2018</p>
+    <p class="__copyright">Food Giving 2018</p>
   </footer>
   
   <script src="js/scripts.js"></script>
